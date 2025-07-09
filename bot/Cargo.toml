@@ -1,0 +1,30 @@
+[package]
+name = "discordbot"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dotenv = "0.15.0"
+redb = "2.6.0"
+reqwest = { version = "0.12.22", features = ["json"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.141"
+solana-client = "2.3.5"
+solana-sdk = "2.3.1"
+spl-associated-token-account = "7.0.0"
+spl-token = "8.0.0"
+thiserror = "2.0.12"
+tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
+
+[dependencies.serenity]
+default-features = false
+features = [
+    "builder",
+    "client", 
+    "gateway",
+    "http",
+    "model",
+    "utils",
+    "rustls_backend"
+]
+version = "0.12.4"

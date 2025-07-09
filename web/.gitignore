@@ -1,0 +1,26 @@
+# Next.js
+/.next/
+/out/
+
+# Build artifacts
+/build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Firebase
+.firebase
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+
+# Functions build output
+/functions/lib/
+
+# Sentry
+.sentryclirc
+
+# Vercel
+.vercel
+
+# Testing
+/coverage/
