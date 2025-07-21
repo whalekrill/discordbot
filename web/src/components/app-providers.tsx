@@ -12,8 +12,8 @@ export function AppProviders({ children }: Readonly<{ children: React.ReactNode 
       new QueryClient({
         defaultOptions: {
           queries: {
-            staleTime: 60 * 1000,
-            refetchOnWindowFocus: false,
+            staleTime: 10 * 1000,
+            refetchOnWindowFocus: true,
           },
         },
       }),

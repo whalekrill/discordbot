@@ -50,6 +50,7 @@ export function useWallets() {
       return result.data
     },
     enabled: !loading && !!user?.uid,
+    staleTime: 5 * 1000,
     refetchOnWindowFocus: true,
     refetchOnMount: true,
     refetchOnReconnect: true,
