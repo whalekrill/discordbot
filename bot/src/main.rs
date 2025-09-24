@@ -149,8 +149,7 @@ async fn send_response_based_on_type(
                         println!("Cannot send follow-up: {why}");
                     }
                 }
-            } else {
-                if let Err(why) = command
+            } else if let Err(why) = command
                     .edit_response(
                         &ctx.http,
                         serenity::builder::EditInteractionResponse::new().content(&result.message),
@@ -159,7 +158,6 @@ async fn send_response_based_on_type(
                 {
                     println!("Cannot edit response: {why}");
                 }
-            }
         }
     }
 }

@@ -51,7 +51,7 @@ pub async fn fetch_wallet_addresses(
 
     let client = reqwest::Client::new();
     let response = client
-        .post(&format!("{}/sendToken", config().public_url))
+        .post(format!("{}/sendToken", config().public_url))
         .header("api-key", &config().api_key)
         .header("Content-Type", "application/json")
         .json(&request_body)

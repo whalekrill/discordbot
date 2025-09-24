@@ -167,12 +167,12 @@ pub fn register(token_metadata: Arc<Option<TokenMetadata>>) -> CreateCommand {
     let command_name = format!("send{}", token_name.to_lowercase());
 
     CreateCommand::new(&command_name)
-        .description(&format!("Send {}", token_name))
+        .description(format!("Send {}", token_name))
         .add_option(
             serenity::builder::CreateCommandOption::new(
                 serenity::model::application::CommandOptionType::User,
                 "recipient",
-                &format!("Who will you send {} to", token_name),
+                format!("Who will you send {} to", token_name),
             )
             .required(true),
         )
@@ -180,7 +180,7 @@ pub fn register(token_metadata: Arc<Option<TokenMetadata>>) -> CreateCommand {
             serenity::builder::CreateCommandOption::new(
                 serenity::model::application::CommandOptionType::Integer,
                 "amount",
-                &format!("How much {} to send", token_name),
+                format!("How much {} to send", token_name),
             )
             .required(true)
             .min_int_value(1),
